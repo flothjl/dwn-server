@@ -12,6 +12,7 @@ COPY src ./src
 # so we have to install prerequisites and build node deps from source.
 # RUN apk add --update python3 make g++
 
+RUN npm install -g npm@10.2.3
 RUN npm install --omit=dev
 RUN npm run build:esm
 
